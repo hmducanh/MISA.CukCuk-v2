@@ -1,0 +1,58 @@
+@import url("../styles/layouts/TheContent.css");
+@import url("../styles/layouts/TheHeader.css");
+@import url("../styles/layouts/TheNavbar.css");
+@import url("./TheTable.css");
+@import url("./TheEmployee.css");
+@import url("./dialogs/TheDialog.css");
+@import url("./TheButton.css");
+@import url("./dialogs/TheWarningDialog.css");
+
+.block-select{
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  overflow-y: hidden !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  text-transform: none;
+  text-decoration: none;
+  font-family: NotoSans-Regular;
+  font-size: 13px;
+}
+#app {
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "NotoSans-Regular";
+  src: url("../assets/fonts/notosans-regular.2cb88a13.woff2") format("opentype");
+}
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: url("../assets/fonts/notosans-bold.3ede5aff.woff2") format("opentype");
+}
+@font-face {
+  font-family: "NotoSans-Italic";
+  src: url("../assets/fonts/notosans-italic.1c1aaac9.woff2") format("opentype");
+}
+@font-face {
+    font-family: "NotoSans-Semibold";
+    src: url("../assets/fonts/notosans-semibold.df3e6dc4.woff2") format("opentype");
+  }

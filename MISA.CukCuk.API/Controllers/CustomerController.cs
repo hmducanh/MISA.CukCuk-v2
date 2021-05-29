@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using MISA.core.Interfaces.Repository;
 using MISA.Core.Entities;
+using MISA.Core.Exceptions;
 using MISA.Core.Interfaces.Service;
+using MISA.Core.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +12,23 @@ using System.Threading.Tasks;
 
 namespace MISA.CukCuk.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
-        private ICustomerService _customerService;
+        ICustomerService _customerService;
+        ICustomerRepository _customerRepository;
 
-        public CustomerController(ICustomerService customerService)
+        public CustomerController(ICustomerService customerService, ICustomerRepository customerRepository)
         {
             _customerService = customerService;
+            _customerRepository = customerRepository;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public IActionResult Get()
         {
-            var customers = _customerService.GetAll();
+            var customers = _customerRepository.GetAll();
             if (customers.Count() > 0)
             {
                 return Ok(customers);
@@ -35,52 +39,54 @@ namespace MISA.CukCuk.API.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetByid(Guid id)
+        [HttpGet("{customerId}")]
+        public IActionResult GetById(Guid customerId)
         {
-            var customer = _customerService.GetById(id);
-            if (customer == null)
+            Customer customer = _customerService.GetById(customerId);
+            if (customer != null)
             {
-                return StatusCode(404, new { error = "Id khong ton tai" });
+                return Ok(customer);
             }
-            return Ok(customer);
+            else
+            {
+                return NoContent();
+            }
         }
 
         [HttpPost]
-        public IActionResult Post(Customer customer)
+        public IActionResult Post([FromBody] Customer customer)
         {
-            var res = _customerService.Insert(customer);
-            if (res > 0)
+            try
             {
-                return StatusCode(201, customer);
+                var rowAffect = _customerService.Insert(customer);
+                if (rowAffect > 0)
+                {
+                    return StatusCode(201, rowAffect);
+                }
+                else
+                {
+                    return NoContent();
+                }
             }
-            else
+            catch(CustomException Ex)
             {
-                return NoContent();
+                var mes = new
+                {
+                    devMsg = Ex.Message,
+                    userMsg = "Du lieu khong hop le vui long thu lai",
+                    data = Ex.Data
+                };
+                return StatusCode(400, mes);
             }
-        }
-        [HttpPut("{id}")]
-        public IActionResult Put(Guid id, Customer customer)
-        {
-            var res = _customerService.Update(customer);
-            if (res > 0)
+            catch(Exception Ex)
             {
-                return StatusCode(200);
+                var mes = new
+                {
+                    devMsg = Ex.Message,
+                    userMsg = "Co loi xay ra vui long lien he MISA de duoc tro giup",
+                };
+                return StatusCode(500, mes);
             }
-            else
-            {
-                return NoContent();
-            }
-        }
-        [HttpDelete("{id}")]
-        public IActionResult Detele(Guid id)
-        {
-            var res = _customerService.Delete(id);
-            if (res > 0)
-            {
-                return StatusCode(200);
-            }
-            return NoContent();
         }
     }
 }

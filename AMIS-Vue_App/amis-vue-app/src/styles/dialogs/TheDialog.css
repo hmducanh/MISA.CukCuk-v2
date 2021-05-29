@@ -1,0 +1,288 @@
+.model {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000; 
+    opacity: .8;
+}
+
+.dialog .dialog-content {
+    padding: 24px;
+    position: absolute;
+    top: 46%;
+    left: 44%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 680px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    padding-bottom: 80px;
+}
+
+.isCustomer {
+    display: flex;
+    margin-top: 6px;
+    margin-left: 24px;
+}
+
+.textIsEntity {
+    margin-top: -4px;
+    margin-left: 12px;
+    font-size: 16px;
+}
+
+.doNothing {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
+
+.isSupplier {
+    display: flex;
+    margin-top: 6px;
+    margin-left: 98px;
+}
+
+.dialog .dialog-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dialog .dialog-close-button {
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 4px 0 4px;
+}
+
+.dialog .dialog-close-button:hover {
+        background-color: #bbb;
+        cursor: pointer;
+    }
+
+.dialog-hide {
+display: none;
+}
+
+.dialog .dialog-footer{
+position: absolute;
+display: flex;
+align-items: center;
+bottom: 0;
+/* background-color: #e5e5e5; */
+border-top: 1px solid #e0e0e0;
+height: 80px;
+border-radius: 0 0 4px 4px;
+left: 30px;
+right: 30px;
+}
+
+.m-row {
+    width: calc(100% - 2 * 30px);
+    display: flex;
+    left: 0;
+    height: 58px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+      /* background-color: aquamarine;   */
+}
+
+.row-1 {
+    top: 52px;
+}
+
+.row-2 {
+    top : 132px;
+}
+
+.row-3 {
+    top: calc(132px + 58px + 25px);
+}
+
+.row-4 {
+    top: calc(130px + 2 * ( 58px + 25px ) + 25px );
+}
+
+.row-5 {
+    top: calc(130px + 3 * ( 58px + 25px ) + 25px );
+}
+
+.row-6 {
+    top: calc(130px + 4 * ( 58px + 25px ) + 25px );
+}
+
+.txtEmployeeCode {
+    width: 160px;
+    margin-right: 8px;
+}
+
+.txtFullName {
+    width: 280px;
+    margin-right: 30px;
+}
+
+.dateDateOfBirth {
+    width: 160px;
+    margin-right: 24px;
+}
+
+#comboboxDepartment {
+    height: 32px;
+    width: 448px !important;
+    margin-right: 30px;
+    margin-top: 4px;
+}
+
+.ant-select-selection{
+    border: 1px solid #babec5 !important;
+    border-radius: 2px !important;
+}
+.ant-select-selection:active{
+    border: 1px solid #2ca01c !important;
+}
+.ant-select-selection:focus{
+    border: 1px solid #2ca01c !important;
+}
+/* .ant-select-arrow .ant-select-arrow-icon{
+    display: none !important;
+} */
+.ant-select-focused .ant-select-selection, .ant-select-selection:focus, .ant-select-selection:active{
+    border: 1px solid #2ca01c !important;
+    box-shadow: none !important;
+}
+.ant-select-dropdown-menu-item{
+    color: #111 !important;
+}
+.ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: #ebedf0 !important;
+    color: #35bf22 !important;
+}
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: #35bf22 !important;
+    color: #fff !important;
+}
+.ant-select-selection-selected-value{
+    color: #111 !important;
+} 
+
+.txtIdentifyNumber {
+    width: 280px;
+    margin-right: 8px;
+}
+
+.dateIdentifyDate {
+    width: 160px;
+    margin-top: 4px !important;
+    box-shadow: none !important;
+    border-color: #bbbbbb !important;
+}
+
+.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner {
+    border-color: #2ca01c !important;
+}
+
+.ant-radio-input:hover {
+    border-color: #2ca01c !important;
+}
+
+.ant-radio-checked .ant-radio-inner {
+    border-color: #2ca01c !important;
+}
+
+.ant-radio-inner::after {
+    background-color: #2ca01c !important;
+}
+
+.ant-input {
+    border: 1px solid #babec5 !important;
+}
+
+.row-1 .ant-input {
+    margin-top: 3px !important;
+    height: 34px !important;
+}
+/* border-radius: 1px; */
+
+.ant-input {
+    border-radius: 1px !important;
+}
+
+.ant-input:focus {
+    border-color: #2ca01c !important;
+}
+
+.ant-input:hover {
+    border-color: #2ca01c !important;
+}
+
+.ant-calendar-selected-day .ant-calendar-date {
+    background: #afd3ab !important;
+}
+
+.ant-calendar-date:active {
+    background: #2ca01c !important;
+}
+
+
+.ant-calendar-today .ant-calendar-date {
+    color: #1e8f0f !important;
+    border-color: #1e8f0f!important;
+} 
+
+.txtPositionName {
+    width: 448px;
+    margin-right: 30px;
+}
+
+.txtIdentifyPlace {
+    width: 448px;
+}
+
+.txtAddress {
+    width: calc(2 * 448px + 30px);
+}
+
+.txtPhoneNumber {
+    width: 200px;
+    margin-right: 8px;
+}
+
+.txtConstantPhoneNumber {
+    width: 200px;
+    margin-right: 8px;
+}
+
+.txtEmail {
+    width: 200px;
+    margin-right: 8px;
+}
+
+.txtBankAccount {
+    width: 200px;
+    margin-right: 8px;
+}
+
+.txtBankName {
+    width: 200px;
+    margin-right: 8px;
+}
+
+.txtBankBranch {
+    width: 200px;
+    margin-right: 8px;
+}
+
+/*  */
+
+
+.error-input {
+    border:1px solid red !important;
+}

@@ -1,0 +1,104 @@
+.navbar {
+    width: 178px;
+    background-color: #393A3D;
+}
+
+.logo-box {
+    display: flex;
+    background-color: #393A3D;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    height: 0;
+  }
+  .logo-box .toggle-logo-itemon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -424px -86px;
+  }
+  .logo-box .amis-logo {
+    width: 96px;
+    height: 32px;
+    background: url("../../assets/img/Logo_Module_TiengViet_White.66947422.svg") no-repeat;
+    background-size: contain;
+  }
+  .navbar-content-list {
+    height: calc(100vh - 48px);
+    padding-top: 14px;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  .navbar-content-list .nav-item {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 42px;
+    height: 42px;
+    border-left: 6px solid transparent;
+    padding-left: 8px;
+    color: #fff;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: #38393d;
+  }
+  .navbar-content-list .nav-item:hover {
+    background-color: rgb(97,97,100);
+  }
+
+  .logo-item {
+    background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .navbar-content-list .nav-item .nav-item-1 {
+    background-position: -30px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-2 {
+    background-position: -73px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-3 {
+    background-position: -117px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-4 {
+    background-position: -161px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-5 {
+    background-position: -204px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-6 {
+    background-position: -249px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-7 {
+    background-position: -291px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-8 {
+    background-position: -336px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-9 {
+    background-position: -378px -1630px;
+  }
+  .navbar-content-list .nav-item .nav-item-10 {
+    background-position: -423px -1630px;
+  }
+  .navbar-content-list .nav-item .nav-item-11 {
+    background-position: -467px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-12 {
+    background-position: -510px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-13 {
+    background-position: -378px -1659px;
+  }
+  .navbar-content-list .nav-item .nav-item-14 {
+    background-position: -547px -1628px;
+  }
+  .navbar-content-list .nav-item .nav-item-15 {
+    background-position: -204px -1664px;
+  }
+  

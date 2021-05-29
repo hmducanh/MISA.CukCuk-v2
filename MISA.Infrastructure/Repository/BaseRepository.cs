@@ -1,74 +1,119 @@
 ﻿using Dapper;
+using Microsoft.Extensions.Configuration;
 using MISA.core.Interfaces.Repository;
 using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MISA.Infrastructure.Repository
 {
-        public class BaseRepository<T> : IBaseRepository<T> where T : class
-        {
-            protected string connectionString = "" +
+    /// <summary>
+    /// Những thao tác chung với db
+    /// </summary>
+    /// CreatedBy : hmducanh (29/04/2021)
+    public class BaseRepository<MISAEntity> : IBaseRepository<MISAEntity> where MISAEntity : class
+    {
+
+        #region Setup
+        IConfiguration configuration;
+        //chuỗi kết nối DB 
+        protected string connectionString = "" +
                 "Host = 47.241.69.179;" +
                 "Port=3306;" +
                 "User Id = dev;" +
                 "Password = 12345678;" +
-                "Database =  MF0_NVManh_CukCuk02;" +
+                "Database =  MF822_Import_KDLong;" +
                 "ConvertZeroDateTime=True";
-            protected IDbConnection dbConnection;
-            protected string tableName = typeof(T).Name;
+        // Lấy tên đối tượng MISAEntity
+        string tableName = typeof(MISAEntity).Name;
+        protected IDbConnection dbConnection;
+        #endregion
 
-            public int Delete(Guid entityId)
+        #region methods
+        /// <summary>
+        ///  lấy tất cả dữ liệu
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<MISAEntity> GetAll()
+        {
+            //Kết nối DB 
+            using (dbConnection = new MySqlConnection(connectionString))
             {
-                using (dbConnection = new MySqlConnection(connectionString))
-                {
-                    DynamicParameters parameters = new DynamicParameters();
-                    parameters.Add($"@{tableName}Id", entityId);
-                    var rowsAffect = dbConnection.Execute($"Proc_Delete{tableName}ById", param: parameters, commandType: CommandType.StoredProcedure);
-                    return rowsAffect;
-                }
-            }
-
-            public IEnumerable<T> GetAll()
-            {
-                using (dbConnection = new MySqlConnection(connectionString))
-                {
-                    var entities = dbConnection.Query<T>($"Proc_Get{tableName}s", commandType: CommandType.StoredProcedure);
-                    return entities;
-                }
-            }
-
-            public T GetById(Guid entityId)
-            {
-                using (dbConnection = new MySqlConnection(connectionString))
-                {
-                    DynamicParameters parameters = new DynamicParameters();
-                    parameters.Add($"@{tableName}Id", entityId);
-                    var entity = dbConnection.QueryFirstOrDefault<T>($"Proc_Get{tableName}ById", param: parameters, commandType: CommandType.StoredProcedure);
-                    return entity;
-                }
-            }
-
-            public int Insert(T entity)
-            {
-                using (dbConnection = new MySqlConnection(connectionString))
-                {
-                    var rowsAffect = dbConnection.Execute($"Proc_Insert{tableName}", param: entity, commandType: CommandType.StoredProcedure);
-                    return rowsAffect;
-                }
-            }
-
-            public int Update(T entity)
-            {
-                using (dbConnection = new MySqlConnection(connectionString))
-                {
-                    var rowsAffect = dbConnection.Execute($"Proc_Insert{tableName}", param: entity, commandType: CommandType.StoredProcedure);
-                    return rowsAffect;
-                }
+                //Thực thi với DB 
+                var sqlCommand = $"Proc_Get{tableName}s";
+                var customers = dbConnection.Query<MISAEntity>(sqlCommand, commandType: CommandType.StoredProcedure);
+                return customers;
             }
         }
+        /// <summary>
+        /// lấy dữ liệu theo id
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        public MISAEntity GetById(Guid entityId)
+        {
+            // Kết nối DB 
+            using (dbConnection = new MySqlConnection(connectionString))
+            {
+                //3. Thực thi với DB (Thêm , Sửa xóa)
+                var sqlCommand = $"Proc_Get{tableName}ById";
+                DynamicParameters dynamicParameters = new DynamicParameters();
+                dynamicParameters.Add($"@{tableName}Id", entityId);
+                var entity = dbConnection.QueryFirstOrDefault<MISAEntity>(sqlCommand, param: dynamicParameters, commandType: CommandType.StoredProcedure);
+                return entity;
+            }
+        }
+        /// <summary>
+        ///  thêm 1 thực thể
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public int Insert(MISAEntity entity)
+        {
+            // Kêt nối DB 
+            using (dbConnection = new MySqlConnection(connectionString))
+            {
+                // số dòng bị thay đổi 
+                var rowsAffect = dbConnection.Execute($"Proc_Insert{tableName}", param: entity, commandType: CommandType.StoredProcedure);
+                return rowsAffect;
+            }
+        }
+        /// <summary>
+        ///  cập nhật 1 thực thể
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        public int Update(MISAEntity entity)
+        {
+            // Kết nối DB
+            using (dbConnection = new MySqlConnection(connectionString))
+            {
+                // số dòng bị thay đổi  
+                var sqlCommand = $"Proc_Update{tableName}";
+                var rowAffects = dbConnection.Execute(sqlCommand, param: entity, commandType: CommandType.StoredProcedure);
+                return rowAffects;
+            }
+        }
+        /// <summary>
+        /// xóa một thực thể
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        public int Delete(Guid entityId)
+        {
+            // Kết nối DB 
+            using (dbConnection = new MySqlConnection(connectionString))
+            {
+                // 3. Thực thi hành động
+                var sqlCommand = $"Proc_Delete{tableName}";
+                DynamicParameters dynamicParameters = new DynamicParameters();
+                dynamicParameters.Add($"@{tableName}Id", entityId);
+                var rowsAffects = dbConnection.Execute(sqlCommand, param: dynamicParameters, commandType: CommandType.StoredProcedure);
+                return rowsAffects;
+            }
+        }
+        #endregion
+
+    }
 }

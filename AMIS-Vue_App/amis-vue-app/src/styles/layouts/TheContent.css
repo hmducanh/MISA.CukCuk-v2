@@ -1,0 +1,35 @@
+.content {
+    position: absolute;
+    top: 48px;
+    height: calc(100vh - 48px);
+    left: 178px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #F4F5F6;
+    border-top: 1px solid #dedede;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+.content-body {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.content-body .buttonAdd {
+      position:  absolute;
+      right: 24px;
+}
+  
+.content-body .content-title {
+      font-size: 24px;
+      font-weight : bold;
+}
+  
+.content-table {
+  background-color: #ffffff;
+  height: calc(100vh - 40px - 48px - 36px);
+}

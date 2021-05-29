@@ -2,13 +2,15 @@
 using MISA.Core.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MISA.Infrastructure.Repository
 {
-    class CustomerGroupRepository : BaseRepository<CustomerGroup>, ICustomerGroupRepository
+    public class CustomerGroupRepository : BaseRepository<CustomerGroup>, ICustomerGroupRepository
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// CreatedBy : hmducanh (29/04/2021)
     }
 }

@@ -1,0 +1,78 @@
+.grid {
+    overflow: auto;
+    position: absolute;
+    height: calc(100vh - 240px);
+    width: calc(100% - 64px - 16px);
+    left: 24px;
+    right: 25px;
+    top: 130px;
+    margin-left: 16px;
+}
+
+.icon-loader{
+    z-index: 10000;
+    top:50%;
+    left: 50%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/loading.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    transform: rotate(45deg 16deg 16deg);
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    80% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .grid::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+  }
+  
+  /* Track */
+  .grid::-webkit-scrollbar-track {
+    background: #b8bcc3;
+  }
+  
+  /* Handle */ 
+  .grid::-webkit-scrollbar-thumb {
+    background: #38393d;
+  }
+  
+  /* Handle on hover */
+  .grid::-webkit-scrollbar-thumb:hover {
+    background: #38393d;
+  }
+
+.ant-pagination-item-active {
+    font-weight: 600 !important;
+    border-color: #BBBBBB !important;
+}
+
+.ant-pagination-item-active a {
+    color: #111 !important;
+}
+.ant-pagination-item{
+    font-size: 13px;
+    border-radius: 0 !important;
+}
+
+.ant-pagination-item a:hover {
+    color: #111 !important;
+}
+
+.ant-pagination-item-link-icon {
+  color: #111 !important;
+}

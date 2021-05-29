@@ -1,0 +1,69 @@
+.header {
+    height: 48px;
+    position: absolute;
+    top: 0px;
+    left: 179px;
+    width: calc(100% - 179px);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left .header-icon {
+    background-position: -843px -30px;
+    margin: 0 10px;
+}
+ 
+.header-left .header-branch {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.header-right .header-icon-right {
+    background-position: -787px -30px;
+    position: absolute;
+    right: 234px;
+    top: 12px;
+    
+}
+
+.cover-user {
+    cursor: pointer;
+}
+
+.header-right .cover-user .user-logo {
+    border-radius: 50%;
+    border: 1px solid gray;
+    position: absolute;
+    right: 194px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+}
+
+
+.header-right .cover-user .user-name {
+  font-family: NotoSans-Bold;  
+  position: absolute;
+  right: 40px;
+  top: 14px;
+  font-size: 14px;
+}
+
+.header-right .cover-user .extend-icon {
+    background-position: -1071px -27px;
+    position: absolute;
+    right: 9px;
+    top: 11px;
+}

@@ -1,4 +1,3 @@
-using FluentAssertions.Common;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,10 +8,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using MISA.core.Interfaces.Repository;
+using MISA.Core.Interfaces.Repository;
 using MISA.Core.Interfaces.Service;
+using MISA.Core.Service;
 using MISA.Core.Services;
 using MISA.Infrastructure.Repository;
-using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,9 +43,12 @@ namespace MISA.CukCuk.API
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerGroupService, CustomerGroupService>();
             services.AddScoped<ICustomerGroupRepository, CustomerGroupRepository>();
+            services.AddScoped<IEmployeeService, EmployeeService>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -63,6 +66,12 @@ namespace MISA.CukCuk.API
 
             app.UseAuthorization();
 
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -70,3 +79,9 @@ namespace MISA.CukCuk.API
         }
     }
 }
+
+
+/// <summary>
+/// 
+/// </summary>
+/// CreatedBy : hmducanh (//)

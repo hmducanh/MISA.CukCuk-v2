@@ -1,0 +1,11 @@
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\bin\Debug\netcoreapp3.1\MISA.Core.deps.json
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\bin\Debug\netcoreapp3.1\MISA.Core.dll
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\bin\Debug\netcoreapp3.1\MISA.Core.pdb
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.csprojAssemblyReference.cache
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.AssemblyInfoInputs.cache
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.AssemblyInfo.cs
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.csproj.CoreCompileInputs.cache
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.dll
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.pdb
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.Properties.Resources.resources
+C:\Users\qliph\source\repos\manhnv-229\MISA.FRESHER.TEST\MISA.Core\obj\Debug\netcoreapp3.1\MISA.Core.csproj.GenerateResource.cache
