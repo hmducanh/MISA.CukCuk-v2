@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "udqkt3wAmlU00pq3ko8IOexfRqz3z61JD3JxVnsQArxDDfensJA1QHyMmzP4tG/ddgDFNF0F6ouha2bSdHsfsA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\qliph\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
+    "C:\\Users\\qliph\\.nuget\\packages\\mysqlconnector\\1.3.4\\mysqlconnector.1.3.4.nupkg.sha512"
+  ],
+  "logs": []
+}

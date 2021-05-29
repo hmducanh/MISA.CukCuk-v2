@@ -1,0 +1,208 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.CukCuk.API\\MISA.CukCuk.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj",
+        "projectName": "MISA.Core",
+        "projectPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj",
+        "packagesPath": "C:\\Users\\qliph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\qliph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.CukCuk.API\\MISA.CukCuk.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.CukCuk.API\\MISA.CukCuk.API.csproj",
+        "projectName": "MISA.CukCuk.API",
+        "projectPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.CukCuk.API\\MISA.CukCuk.API.csproj",
+        "packagesPath": "C:\\Users\\qliph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.CukCuk.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\qliph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj": {
+                "projectPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj"
+              },
+              "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\MISA.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[5.10.3, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.45.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\MISA.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
+        "projectName": "MISA.Infrastructure",
+        "projectPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\MISA.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\qliph\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\qliph\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj": {
+                "projectPath": "C:\\Users\\qliph\\Desktop\\MISA.WEB15B_2021_M1\\MISA.CukCuk.v2\\MISA.CukCuk\\MISA.Core\\MISA.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[1.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
